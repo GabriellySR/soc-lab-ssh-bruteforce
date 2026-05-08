@@ -19,8 +19,8 @@ The environment was built entirely using virtual machines and internal networkin
 
 | System | Role | IP Address |
 |--------|------|------------|
-| Kali Linux | Attacker | 192.168.100.20 |
-| Ubuntu Server | Target | 192.168.100.10 |
+| Kali Linux | Attacker | 192.168.***.** |
+| Ubuntu Server | Target | 192.168.***.** |
 
 Network Type:
 - Isolated Internal Network (VirtualBox)
@@ -53,7 +53,7 @@ Verification:
 
 bash
 ip a
-ping 192.168.100.10
+ping 192.168.***.**
 
 ---
 
@@ -71,7 +71,7 @@ sudo systemctl status ssh
 ### Attack Simulation
 
 A brute-force attack was simulated from Kali Linux using Hydra.  
-```hydra -t 2 -l vboxuser -P /usr/share/wordlists/rockyou.txt ssh://192.168.100.10```
+```hydra -t 2 -l v******* -P /usr/share/wordlists/rockyou.txt ssh://192.168.***.**```
 
 ### Attack Characteristics
 Automated password attempts
@@ -126,7 +126,7 @@ Firewall rules were dynamically updated
 sudo fail2ban-client status sshd
 Observed behavior:
 Total banned: 1
-Banned IP list: 192.168.100.20
+Banned IP list: 192.168.***.**
 
 --- 
 
@@ -139,7 +139,7 @@ Fail2ban dynamically created firewall rules using iptables.
 Example result:
 
 Chain f2b-sshd
-REJECT all -- 192.168.100.20 anywhere
+REJECT all -- 192.168.***.** anywhere
 
 This prevented additional SSH access attempts from the attacker machine.
 
@@ -149,7 +149,7 @@ This prevented additional SSH access attempts from the attacker machine.
 
 After the automated response was triggered, SSH access attempts from the attacker machine were tested again. 
  
-```ssh vboxuser@192.168.100.10```
+```ssh vb******@192.168.***.**```
 
 Result
 - Connection restrictions observed
