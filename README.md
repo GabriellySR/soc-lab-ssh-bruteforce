@@ -171,17 +171,23 @@ Several real-world issues were encountered and resolved during the project:
 These troubleshooting steps provided valuable hands-on experience with Linux administration and security tooling.
 
 ## Screenshots
-Network Configuration
 
-SSH Service Running
+<table align="center">
+  <tr>
+    <td align="center"><img src="HYDRA%20ATTACK.png" width="550"><br><b><span style="color:red">Hydra Brute Force Attack</span></b></td>
+    <td align="center"><img src="SSH%20RUNNING.png" width="550"><br><b><span style="color:red">Active SSH Service</span></b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="PORT22.png" width="550"><br><b><span style="color:red">Port 22 Monitoring</span></b></td>
+    <td align="center"><img src="SSH.png" width="550"><br><b><span style="color:red">SSH Access Logs</span></b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="SUDO%20IPTABLES.png" width="550"><br><b><span style="color:red">Iptables Firewall Rules</span></b></td>
+    <td align="center"><img src="JAIL%20FAIL%20BAN.png" width="550"><br><b><span style="color:red">IP Ban Confirmation</span></b></td>
+  </tr>
+</table>
 
-Hydra Attack Simulation
-
-SSH Log Analysis
-
-Fail2ban Detection
-
-Firewall Enforcement
+---
 
 ## Key Takeaways
 
